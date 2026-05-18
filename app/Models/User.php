@@ -18,6 +18,14 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     /**
+     * I can't use the "users" table because it's already taken.
+     * It's master's thesis - therefore, master_users.
+     *
+     * @var array<int, string>
+     */
+    protected $table = 'master_users';
+
+    /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
