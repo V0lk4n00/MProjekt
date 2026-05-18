@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Response;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,7 +15,7 @@ class AdminController extends Controller
             return redirect()->route('admin.console');
         }
 
-        return view('admin.index');
+        return view('admin.login');
     }
 
     public function login(Request $request)
